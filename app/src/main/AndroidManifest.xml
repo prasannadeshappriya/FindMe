@@ -18,7 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.RegisterActivity"></activity>
+        <activity android:name=".UI.RegisterActivity" />
+        <activity
+            android:name=".UI.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.Dark"></activity>
     </application>
 
 </manifest>

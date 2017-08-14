@@ -60,6 +60,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser(View v) {
-        Constants.printLog("Login button pressed");
+        Intent i = new Intent(this, HomeActivity.class);
+        startActivity(i);
+        overridePendingTransition(android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right);
     }
 }
