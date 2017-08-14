@@ -3,6 +3,8 @@ package com.example.prasanna_d.findme.UI;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +16,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.prasanna_d.findme.Constants;
+import com.example.prasanna_d.findme.Fragments.FeedbackFragment;
+import com.example.prasanna_d.findme.Fragments.HomeFragment;
+import com.example.prasanna_d.findme.Fragments.NotificationFragment;
+import com.example.prasanna_d.findme.Fragments.ProfileFragment;
+import com.example.prasanna_d.findme.Fragments.SettingsFragment;
 import com.example.prasanna_d.findme.R;
 
 public class HomeActivity extends AppCompatActivity
@@ -87,18 +94,23 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             Constants.printLog("Home fragment transaction");
             toolbar.setTitle("Home");
+            showHomeFragment();
         } else if (id == R.id.nav_profile) {
             Constants.printLog("Profile fragment transaction");
             toolbar.setTitle("Profile");
+            showProfileFragment();
         } else if (id == R.id.nav_notifications) {
             Constants.printLog("Notification fragment transaction");
             toolbar.setTitle("Notification");
+            showNotificationFragment();
         } else if (id == R.id.nav_settings) {
             Constants.printLog("Settings fragment transaction");
             toolbar.setTitle("Settings");
+            showSettingsFragment();
         } else if (id == R.id.nav_feedback) {
             Constants.printLog("Feedback fragment transaction");
             toolbar.setTitle("Feedback");
+            showFeedbackFragment();
         } else if (id == R.id.nav_about) {
             Constants.printLog("About fragment transaction");
             toolbar.setTitle("About");
@@ -109,5 +121,51 @@ public class HomeActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    //Show Fragments
+    private void showHomeFragment(){
+        HomeFragment homeFragment = new HomeFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frmMain, homeFragment);
+        transaction.setCustomAnimations(android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right);
+        transaction.commit();
+    }
+
+    private void showProfileFragment(){
+        ProfileFragment profileFragment = new ProfileFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frmMain, profileFragment);
+        transaction.setCustomAnimations(android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right);
+        transaction.commit();
+    }
+
+    private void showNotificationFragment(){
+        NotificationFragment notificationFragment = new NotificationFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frmMain, notificationFragment);
+        transaction.setCustomAnimations(android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right);
+        transaction.commit();
+    }
+
+    private void showSettingsFragment(){
+        SettingsFragment settingsFragment = new SettingsFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frmMain, settingsFragment);
+        transaction.setCustomAnimations(android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right);
+        transaction.commit();
+    }
+
+    private void showFeedbackFragment(){
+        FeedbackFragment feedbackFragment = new FeedbackFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frmMain, feedbackFragment);
+        transaction.setCustomAnimations(android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right);
+        transaction.commit();
     }
 }
