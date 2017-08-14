@@ -1,34 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#0A8F72</color>
-    <color name="colorAccent">#FF4081</color>
-
-    <!--<color name="primary">#795548</color>-->
-    <!--<color name="primary_dark">#5D4037</color>-->
-    <!--<color name="primary_light">#D7CCC8</color>-->
-    <!--<color name="accent">#9E9E9E</color>-->
-    <!--<color name="primary_text">#212121</color>-->
-    <!--<color name="secondary_text">#757575</color>-->
-    <!--<color name="icons">#FFFFFF</color>-->
-    <!--<color name="divider">#BDBDBD</color>-->
-    <color name="light_blue">#27AAD4</color>
-    <color name="primary">#3F51B5</color>
-    <color name="primary_dark">#b976ed</color>
-    <color name="primary_light">#C5CAE9</color>
-    <color name="accent">#7C4DFF</color>
+    <color name="primary">#0097A7</color>
+    <color name="primary_dark">#00BCD4</color>
+    <color name="primary_light">#B2EBF2</color>
+    <color name="accent">#009688</color>
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
 
-    <color name="colorPrimary1">#3F51B5</color>
-    <color name="colorPrimaryDark1">#303F9F</color>
-    <color name="colorAccent1">#FF4081</color>
-    <color name="primary1">#E43F3F</color>
-    <color name="primary_dark1">#E12929</color>
-    <color name="primary_darker">#CC1D1D</color>
-    <color name="accent1">#FFFFFF</color>
+    <color name="button_color">#4DD0E1</color>
 
     <color name="black">#000000</color>
     <color name="jet">#222222</color>
